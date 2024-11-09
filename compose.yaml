@@ -1,0 +1,31 @@
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+
+    restart: always
+    ports:
+      - "3000:3000"
+
+    volumes:
+      - ./frontend:/app/frontend
+      - exclude:/app/frontend/node_modules
+
+    depends_on:
+      - backend
+
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+
+volumes:
+  exclude:
