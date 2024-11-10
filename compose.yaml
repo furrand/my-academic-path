@@ -1,6 +1,7 @@
 services:
   frontend:
     container_name: frontend
+    stdin_open: true
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -11,7 +12,7 @@ services:
 
     volumes:
       - ./frontend:/app/frontend
-      - exclude:/app/frontend/node_modules
+      - /app/frontend/node_modules
 
     depends_on:
       - backend

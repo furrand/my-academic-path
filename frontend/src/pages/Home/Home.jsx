@@ -1,8 +1,6 @@
 import React from 'react';
 import { Typography, Stack, Container } from '@mui/material';
-import Counter from '@/components/Counter/Counter';
-import TemplateTester from '@/components/TemplateTester/TemplateTester';
-import AgreementSelector from '../../components/AgreementSelector/AgreementSelector';
+import SelectionCard from '../../components/SelectionCard/SelectionCard';
 
 function Home() {
   return (
@@ -12,7 +10,7 @@ function Home() {
           Better Assist
         </Typography>
       </Stack>
-      <AgreementSelector />
+      <SelectionCard />
     </Container>
   );
 }

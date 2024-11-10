@@ -1,9 +1,16 @@
+from assist.models import AcademicYear, Institution
 from rest_framework import generics
-from assist.models import Institution
-from .serializers import InstitutionSerializer
+
+from .serializers import AcademicYearSerializer, InstitutionSerializer
 
 
-class InstitutionList(generics.ListCreateAPIView):
+class AcademicYearList(generics.ListAPIView):
+    queryset = AcademicYear.academic_year_objects.all()
+    serializer_class = AcademicYearSerializer
+    pass
+
+
+class InstitutionList(generics.ListAPIView):
     queryset = Institution.institution_objects.all()
     serializer_class = InstitutionSerializer
     pass
