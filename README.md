@@ -31,6 +31,11 @@ From inside the directory, type in the command:
 ```bash
 make dev-build
 ```
+For Windows the alternate command is:
+
+```powershell
+docker compose up
+```
 
 This will build the docker image, installing all of the required dependencies
 and ensuring that everything runs the same on everyone's computer. The first
