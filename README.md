@@ -1,7 +1,7 @@
-# Better Assist
+# My Academic Path
 
-The goal of this project is to empower students in planning their academic
-future. We are using data provided by [Assist.org](https://www.assist.org) to
+The goal of this project is to empower students to plan their academic
+future. We are using data from [Assist.org](https://www.assist.org) to
 power an app that allows comparisons of major requirements across multiple
 universities.
 
